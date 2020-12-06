@@ -13,10 +13,15 @@ with open(Budget_data) as csvfile:
                 columns = [str(row_index)]
                 profit = []
                 data.append(columns)
-                
-    #return data
+              
+        for row in csvreader:
+                if row: int
+                columns2 = [row[1]]
+                data.append(columns2)
+                    #return data
 data = import_csv(csvfile)
 info = dict()
 info = {"Total Months" : data[-1],
          "Total": () }
 print(f'{info}')
+print(row[1])
