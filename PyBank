@@ -1,1 +1,22 @@
-
+import os
+import csv
+import pandas as pd
+#def import_csv(csvfile):
+data = []
+Budget_data = os.path.join('..', 'Desktop', 'budget.csv')
+with open(Budget_data) as csvfile:
+        csvreader = csv.reader(csvfile, delimiter=",")
+        row_index = -1
+        for row in csvreader:
+            if row:
+                row_index +=1
+                columns = [str(row_index)]
+                profit = []
+                data.append(columns)
+                
+    #return data
+data = import_csv(csvfile)
+info = dict()
+info = {"Total Months" : data[-1],
+         "Total": () }
+print(f'{info}')
